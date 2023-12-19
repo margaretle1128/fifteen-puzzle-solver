@@ -58,3 +58,14 @@ To compile and run the solver, follow these steps:
 ## Performance
 - This solver is optimized to handle puzzles up to 7x7 size efficiently.
 - It can also solve simpler puzzles of sizes 8x8 and 9x9, although the solution time may vary based on the complexity of the puzzle configuration.
+
+## Implementation Details
+The Fifteen Puzzle Solver uses an A* search algorithm for efficient puzzle solving. Key components include:
+
+- **A* Algorithm**: Employs a priority queue for pathfinding, with f-values guiding the search.
+- **Heuristic Function**: Varies based on puzzle size. Uses Manhattan distance for smaller boards and combines it with row/column conflicts and Euclidean distance for larger ones.
+- **Classes**:
+   - `Vertex`: Represents puzzle states, including the board configuration, movement, parent vertex, and heuristic value.
+   - `Solver`: Manages input processing, goal board generation, and implements the A* algorithm.
+
+This design allows the solver to effectively handle puzzles up to 7x7 and simpler configurations of larger puzzles.
