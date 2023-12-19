@@ -19,6 +19,24 @@ The Fifteen Puzzle Solver is a Java application designed to solve the classic 15
 1. Clone the repository or download the source code.
 2. Navigate to the directory containing the source files.
 
+### Compilation and Running the Solver
+To compile and run the solver, follow these steps:
+
+1. Open a terminal or command prompt.
+2. Change directory to the `src` folder where the source files are located:
+   ```
+   cd src
+   ```
+3. Compile the `Solver` class (and any other required classes):
+   ```
+   javac fifteenpuzzle/Solver.java
+   ```
+4. Run the solver using the command line, specifying the input and output file paths:
+   ```
+   java fifteenpuzzle.Solver input.txt output.txt
+   ```
+   Replace `input.txt` with the path to your input file and `output.txt` with the path where you want the solution to be saved.
+
 ### Usage
 1. Prepare an input file with the puzzle configuration. The first line should indicate the size of the puzzle (e.g., `3` for a 3x3 puzzle), followed by the puzzle rows, with numbers separated by spaces and `0` representing the empty space.
 
@@ -30,13 +48,7 @@ The Fifteen Puzzle Solver is a Java application designed to solve the classic 15
     4 6 7
     ```
 
-2. Run the solver using the command line:
-    ```
-    java fifteenpuzzle.Solver input.txt output.txt
-    ```
-   Here, `input.txt` is your input file, and `output.txt` is where the solution will be written.
-
-3. The solution will be written to the specified output file.
+2. Follow the compilation and running instructions above to get the solution.
 
 ## Components
 - `Solver.java`: The main class that reads the puzzle configuration, solves it, and writes the solution.
