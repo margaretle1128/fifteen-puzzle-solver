@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.lang.invoke.MethodHandles;
 import java.util.*;
-import java.util.PriorityQueue;
 
 public class Solver {
 	public static int SIZE; //the dimension of the board
@@ -52,12 +51,16 @@ public class Solver {
 
 		int[][] board = new int[SIZE][SIZE];
 		int c1, c2;
-
 		for (int i = 0; i < SIZE; i++) {
+			int count = 0;
 			for (int j = 0; j < SIZE; j++) {
 				c1 = br.read();
 				c2 = br.read();
+				count++;
 				br.read();// skip the space
+				if (count == SIZE) {
+					br.readLine();
+				}
 
 				if (c1 == ' ')
 					c1 = '0';
